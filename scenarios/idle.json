@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "policy": "rr",
+  "ues": 0,
+  "slots": 10,
+  "prbs": 50,
+  "bytes_per_slot": 0,
+  "seed": 42,
+  "invariants": [
+    "allocated PRBs <= budget",
+    "admitted = queued + served",
+    "no duplicate UE grant per slot"
+  ]
+}

@@ -1,0 +1,43 @@
+Test project /workspace/scratch/bb532e546b90/aether-5g/build-sanitize
+      Start  1: Capacity.ZeroAndBounds
+ 1/19 Test  #1: Capacity.ZeroAndBounds ........................................................   Passed    0.01 sec
+      Start  2: Capacity.KnownCalculation
+ 2/19 Test  #2: Capacity.KnownCalculation .....................................................   Passed    0.01 sec
+      Start  3: Capacity.Monotonic
+ 3/19 Test  #3: Capacity.Monotonic ............................................................   Passed    0.01 sec
+      Start  4: Clock.DurationsAndProgress
+ 4/19 Test  #4: Clock.DurationsAndProgress ....................................................   Passed    0.01 sec
+      Start  5: Registry.Validation
+ 5/19 Test  #5: Registry.Validation ...........................................................   Passed    0.01 sec
+      Start  6: Registry.OverflowIsAtomic
+ 6/19 Test  #6: Registry.OverflowIsAtomic .....................................................   Passed    0.01 sec
+      Start  7: RoundRobin.RotationAndRemoval
+ 7/19 Test  #7: RoundRobin.RotationAndRemoval .................................................   Passed    0.01 sec
+      Start  8: RoundRobin.InactiveAndOutage
+ 8/19 Test  #8: RoundRobin.InactiveAndOutage ..................................................   Passed    0.01 sec
+      Start  9: RoundRobin.PartialAndContiguous
+ 9/19 Test  #9: RoundRobin.PartialAndContiguous ...............................................   Passed    0.01 sec
+      Start 10: Scheduler.EmptyZeroAndInvalidResource
+10/19 Test #10: Scheduler.EmptyZeroAndInvalidResource .........................................   Passed    0.01 sec
+      Start 11: ProportionalFair.ChannelAndHistory
+11/19 Test #11: ProportionalFair.ChannelAndHistory ............................................   Passed    0.02 sec
+      Start 12: Qos.PriorityOverridesChannel
+12/19 Test #12: Qos.PriorityOverridesChannel ..................................................   Passed    0.01 sec
+      Start 13: Fairness.KnownValues
+13/19 Test #13: Fairness.KnownValues ..........................................................   Passed    0.01 sec
+      Start 14: Regression.LegacyShrinkingVector
+14/19 Test #14: Regression.LegacyShrinkingVector ..............................................   Passed    0.01 sec
+      Start 15: Policies/Invariants.SeededReplayAndConservation/4-byte object <00-00 00-00>
+15/19 Test #15: Policies/Invariants.SeededReplayAndConservation/4-byte object <00-00 00-00> ...   Passed    0.84 sec
+      Start 16: Policies/Invariants.SeededReplayAndConservation/4-byte object <01-00 00-00>
+16/19 Test #16: Policies/Invariants.SeededReplayAndConservation/4-byte object <01-00 00-00> ...   Passed    2.57 sec
+      Start 17: Policies/Invariants.SeededReplayAndConservation/4-byte object <02-00 00-00>
+17/19 Test #17: Policies/Invariants.SeededReplayAndConservation/4-byte object <02-00 00-00> ...   Passed    2.50 sec
+      Start 18: scheduler_invariants
+18/19 Test #18: scheduler_invariants ..........................................................   Passed    0.00 sec
+      Start 19: scenario_replay
+19/19 Test #19: scenario_replay ...............................................................   Passed    0.59 sec
+
+100% tests passed out of 19
+
+Total Test time (real) =   6.68 sec
