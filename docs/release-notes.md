@@ -1,3 +1,5 @@
+> Historical Sprint 1 evidence. For current Sprint 2 behavior and verification, see [Sprint 2 report](sprint2/report.md). These timings do not measure Sprint 2.
+
 # Sprint 1 source checkpoint
 
 Baseline audit and working MAC scheduling vertical slice. Added explicit PRB allocation and RR/PF/QoS policies without replacing the original byte-budget executable. Fixed legacy vector-shrink invalid access and Release-disabled assertions.

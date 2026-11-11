@@ -1,8 +1,11 @@
 # Verification
-Baseline before edits: GCC 14.2.0 Debug build succeeded; 1/1 original CTest passed. Legacy demo output preserved. Audit found a stale cursor after shrinking a UE vector and Release assertions compiled out. Both fixed with regression coverage and runtime checks.
 
-Current tests: GoogleTest 1.15.2, 17 discovered cases (including three policy instances), legacy test, and Python scenario integration test. Parameterized invariant tests each run 1000 slots with 100 UEs using seed 42; iterations are not counted as individual tests. Check PRB bounds/contiguity, unique grants, active state, capacity/backlog limits, byte conservation and replay. Integration test covers four deterministic JSON scenarios and invalid CLI inputs. GoogleTest assertions remain active in Release.
+The Sprint 2 audit checked remote commit a27e313. All 19 existing CTest entries passed before implementation. Those source files and tests were preserved. Historical Sprint 1 logs remain in this directory; current evidence is under sprint2/.
 
-Raw executed results: debug-tests.txt, release-tests.txt and sanitizer-tests.txt. Full-suite target of 150 tests and 85% protocol coverage remains future work. No coverage percentage claimed. TSan, Valgrind, fuzzing and long stress run not executed for this slice. GitHub Actions is supplied but not remotely executed here.
+The current suite has 50 CTest entries: 47 GoogleTest cases (17 original plus 30 new, including policy instances), the original legacy test, the original Python scenario test, and the new bidirectional CLI replay test. Loop iterations and repeated runs are not counted as distinct tests.
 
-Sanitizer host limitation: default LeakSanitizer failed during test discovery with "LeakSanitizer does not work under ptrace". Rerun uses ASAN_OPTIONS=detect_leaks=0 for both build and CTest. This disables leak detection only; address and undefined-behavior instrumentation remain enabled. Leak checking must be repeated on an unrestricted Linux host.
+New tests cover HARQ transitions, process exhaustion/reuse, stale and duplicate feedback, timeout boundaries, configuration/overflow rejection, BSR ordering/freshness/retirement, independent UL/DL namespaces, pending reservations, full byte accounting against an independent ledger, and deterministic PHY outcomes. Three 100-UE scenarios are repeated for RR/PF/QoS. The CLI test compares complete CSV traces and summaries and independently checks per-slot resource bounds and terminal conservation.
+
+Build/test commands and results: [Sprint 2 report](sprint2/report.md). Normal ASan/UBSan build failed at test discovery because LeakSanitizer cannot operate under host tracing. The recorded passing run uses ASAN_OPTIONS=detect_leaks=0 and UBSAN_OPTIONS=halt_on_error=1. CMake also sets -fno-sanitize-recover=all. This verifies address and undefined-behavior checks, not leak freedom.
+
+No TSan, coverage, fuzzing, Valgrind, 60-minute stress, remote CI or Clang result is claimed. The full-project targets of 150 meaningful tests and 85% core line coverage remain future milestones.

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "policy": "rr",
+  "ues": 100,
+  "traffic_slots": 200,
+  "seed": 42,
+  "nack_per_mille": 250,
+  "silent_per_mille": 30
+}

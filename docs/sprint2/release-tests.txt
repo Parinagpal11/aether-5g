@@ -1,0 +1,105 @@
+Test project /workspace/scratch/bb532e546b90/aether-sprint2/build-release
+      Start  1: Capacity.ZeroAndBounds
+ 1/50 Test  #1: Capacity.ZeroAndBounds ...........................................................   Passed    0.00 sec
+      Start  2: Capacity.KnownCalculation
+ 2/50 Test  #2: Capacity.KnownCalculation ........................................................   Passed    0.00 sec
+      Start  3: Capacity.Monotonic
+ 3/50 Test  #3: Capacity.Monotonic ...............................................................   Passed    0.00 sec
+      Start  4: Clock.DurationsAndProgress
+ 4/50 Test  #4: Clock.DurationsAndProgress .......................................................   Passed    0.00 sec
+      Start  5: Registry.Validation
+ 5/50 Test  #5: Registry.Validation ..............................................................   Passed    0.00 sec
+      Start  6: Registry.OverflowIsAtomic
+ 6/50 Test  #6: Registry.OverflowIsAtomic ........................................................   Passed    0.00 sec
+      Start  7: RoundRobin.RotationAndRemoval
+ 7/50 Test  #7: RoundRobin.RotationAndRemoval ....................................................   Passed    0.00 sec
+      Start  8: RoundRobin.InactiveAndOutage
+ 8/50 Test  #8: RoundRobin.InactiveAndOutage .....................................................   Passed    0.00 sec
+      Start  9: RoundRobin.PartialAndContiguous
+ 9/50 Test  #9: RoundRobin.PartialAndContiguous ..................................................   Passed    0.00 sec
+      Start 10: Scheduler.EmptyZeroAndInvalidResource
+10/50 Test #10: Scheduler.EmptyZeroAndInvalidResource ............................................   Passed    0.00 sec
+      Start 11: ProportionalFair.ChannelAndHistory
+11/50 Test #11: ProportionalFair.ChannelAndHistory ...............................................   Passed    0.00 sec
+      Start 12: Qos.PriorityOverridesChannel
+12/50 Test #12: Qos.PriorityOverridesChannel .....................................................   Passed    0.00 sec
+      Start 13: Fairness.KnownValues
+13/50 Test #13: Fairness.KnownValues .............................................................   Passed    0.00 sec
+      Start 14: Regression.LegacyShrinkingVector
+14/50 Test #14: Regression.LegacyShrinkingVector .................................................   Passed    0.00 sec
+      Start 15: Policies/Invariants.SeededReplayAndConservation/4-byte object <00-00 00-00>
+15/50 Test #15: Policies/Invariants.SeededReplayAndConservation/4-byte object <00-00 00-00> ......   Passed    0.01 sec
+      Start 16: Policies/Invariants.SeededReplayAndConservation/4-byte object <01-00 00-00>
+16/50 Test #16: Policies/Invariants.SeededReplayAndConservation/4-byte object <01-00 00-00> ......   Passed    0.05 sec
+      Start 17: Policies/Invariants.SeededReplayAndConservation/4-byte object <02-00 00-00>
+17/50 Test #17: Policies/Invariants.SeededReplayAndConservation/4-byte object <02-00 00-00> ......   Passed    0.05 sec
+      Start 18: Harq.ConfigurationValidation
+18/50 Test #18: Harq.ConfigurationValidation .....................................................   Passed    0.00 sec
+      Start 19: Harq.AckDeliversOnce
+19/50 Test #19: Harq.AckDeliversOnce .............................................................   Passed    0.00 sec
+      Start 20: Harq.NackRetryKeepsBytesAndRejectsOldAttempt
+20/50 Test #20: Harq.NackRetryKeepsBytesAndRejectsOldAttempt .....................................   Passed    0.00 sec
+      Start 21: Harq.AttemptLimitAndFailedReuse
+21/50 Test #21: Harq.AttemptLimitAndFailedReuse ..................................................   Passed    0.00 sec
+      Start 22: Harq.DeadlineIsExclusiveAndExpiryIsIdempotent
+22/50 Test #22: Harq.DeadlineIsExclusiveAndExpiryIsIdempotent ....................................   Passed    0.00 sec
+      Start 23: Harq.TimeoutMakesRetryReady
+23/50 Test #23: Harq.TimeoutMakesRetryReady ......................................................   Passed    0.00 sec
+      Start 24: Harq.ExhaustionAndInvalidOperationsAreAtomic
+24/50 Test #24: Harq.ExhaustionAndInvalidOperationsAreAtomic .....................................   Passed    0.00 sec
+      Start 25: Harq.OverflowRejected
+25/50 Test #25: Harq.OverflowRejected ............................................................   Passed    0.00 sec
+      Start 26: Controller.DlVerticalSliceCountsOnlyAcknowledgedBytes
+26/50 Test #26: Controller.DlVerticalSliceCountsOnlyAcknowledgedBytes ............................   Passed    0.00 sec
+      Start 27: Controller.DirectionsAndProcessNamespacesAreIndependent
+27/50 Test #27: Controller.DirectionsAndProcessNamespacesAreIndependent ..........................   Passed    0.00 sec
+      Start 28: Controller.RetriesDoNotConsumeUniqueBytesTwice
+28/50 Test #28: Controller.RetriesDoNotConsumeUniqueBytesTwice ...................................   Passed    0.00 sec
+      Start 29: Controller.ExhaustedAttemptsRetireExactlyOnce
+29/50 Test #29: Controller.ExhaustedAttemptsRetireExactlyOnce ....................................   Passed    0.00 sec
+      Start 30: Controller.OutstandingBoundsApplyToInflightAndQueued
+30/50 Test #30: Controller.OutstandingBoundsApplyToInflightAndQueued .............................   Passed    0.00 sec
+      Start 31: Controller.NoFreeProcessPreservesQueuedData
+31/50 Test #31: Controller.NoFreeProcessPreservesQueuedData ......................................   Passed    0.00 sec
+      Start 32: Controller.OutageAndInsufficientRetryBudgetPreservePending
+32/50 Test #32: Controller.OutageAndInsufficientRetryBudgetPreservePending .......................   Passed    0.00 sec
+      Start 33: Controller.BadClockBudgetAndRegistrationLeaveStateIntact
+33/50 Test #33: Controller.BadClockBudgetAndRegistrationLeaveStateIntact .........................   Passed    0.00 sec
+      Start 34: Controller.CumulativeCounterOverflowRejectedWithoutMutation
+34/50 Test #34: Controller.CumulativeCounterOverflowRejectedWithoutMutation ......................   Passed    0.00 sec
+      Start 35: Controller.FullAccountingAgainstIndependentLedger
+35/50 Test #35: Controller.FullAccountingAgainstIndependentLedger ................................   Passed    0.00 sec
+      Start 36: Bsr.DelayedReportDoesNotReadmitPendingOrDeliveredBytes
+36/50 Test #36: Bsr.DelayedReportDoesNotReadmitPendingOrDeliveredBytes ...........................   Passed    0.00 sec
+      Start 37: Bsr.InvalidReportsAreAtomic
+37/50 Test #37: Bsr.InvalidReportsAreAtomic ......................................................   Passed    0.00 sec
+      Start 38: Bsr.FreshnessStopsNewGrantsButNotRetries
+38/50 Test #38: Bsr.FreshnessStopsNewGrantsButNotRetries .........................................   Passed    0.00 sec
+      Start 39: Bsr.RetirementWatermarksAndZeroReports
+39/50 Test #39: Bsr.RetirementWatermarksAndZeroReports ...........................................   Passed    0.00 sec
+      Start 40: Phy.CertainAckNackAndSilence
+40/50 Test #40: Phy.CertainAckNackAndSilence .....................................................   Passed    0.00 sec
+      Start 41: Phy.DeterministicAndIdentityPreserved
+41/50 Test #41: Phy.DeterministicAndIdentityPreserved ............................................   Passed    0.00 sec
+      Start 42: Phy.RejectsInvalidConfigurationAndOverflow
+42/50 Test #42: Phy.RejectsInvalidConfigurationAndOverflow .......................................   Passed    0.00 sec
+      Start 43: BidirectionalEdges.AllFeedbackSilentTerminatesWithFailure
+43/50 Test #43: BidirectionalEdges.AllFeedbackSilentTerminatesWithFailure ........................   Passed    0.00 sec
+      Start 44: BidirectionalEdges.PerfectChannelDeliversEverything
+44/50 Test #44: BidirectionalEdges.PerfectChannelDeliversEverything ..............................   Passed    0.00 sec
+      Start 45: AllPolicies/Bidirectional.HundredUesReplayAndDrain/4-byte object <00-00 00-00>
+45/50 Test #45: AllPolicies/Bidirectional.HundredUesReplayAndDrain/4-byte object <00-00 00-00> ...   Passed    0.04 sec
+      Start 46: AllPolicies/Bidirectional.HundredUesReplayAndDrain/4-byte object <01-00 00-00>
+46/50 Test #46: AllPolicies/Bidirectional.HundredUesReplayAndDrain/4-byte object <01-00 00-00> ...   Passed    0.05 sec
+      Start 47: AllPolicies/Bidirectional.HundredUesReplayAndDrain/4-byte object <02-00 00-00>
+47/50 Test #47: AllPolicies/Bidirectional.HundredUesReplayAndDrain/4-byte object <02-00 00-00> ...   Passed    0.06 sec
+      Start 48: scheduler_invariants
+48/50 Test #48: scheduler_invariants .............................................................   Passed    0.00 sec
+      Start 49: scenario_replay
+49/50 Test #49: scenario_replay ..................................................................   Passed    0.26 sec
+      Start 50: bidirectional_cli_replay
+50/50 Test #50: bidirectional_cli_replay .........................................................   Passed    0.33 sec
+
+100% tests passed out of 50
+
+Total Test time (real) =   0.94 sec

@@ -1,0 +1,38 @@
+[0/1] Re-running CMake...
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize
+[1/35] Building CXX object CMakeFiles/aether_core.dir/src/scheduler.cpp.o
+[2/35] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/harq.cpp.o
+[3/35] Building CXX object CMakeFiles/aether_mac.dir/src/mac/scheduler.cpp.o
+[4/35] Building CXX object CMakeFiles/aether_sprint2.dir/src/phy/feedback.cpp.o
+[5/35] Linking CXX static library libaether_mac.a
+[6/35] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/controller.cpp.o
+[7/35] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/bidirectional.cpp.o
+[8/35] Linking CXX static library libaether_core.a
+[9/35] Building CXX object CMakeFiles/aether_sim.dir/src/main.cpp.o
+[10/35] Building CXX object CMakeFiles/aether_tests.dir/tests/scheduler_test.cpp.o
+[11/35] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[12/35] Building CXX object CMakeFiles/aether_slots.dir/simulator/main.cpp.o
+[13/35] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[14/35] Linking CXX static library libaether_sprint2.a
+[15/35] Building CXX object CMakeFiles/scheduler_bench.dir/benchmarks/scheduler_bench.cpp.o
+[16/35] Building CXX object CMakeFiles/sprint2_tests.dir/tests/harq_test.cpp.o
+[17/35] Building CXX object CMakeFiles/mac_tests.dir/tests/mac_test.cpp.o
+[18/35] Building CXX object CMakeFiles/sprint2_tests.dir/tests/controller_test.cpp.o
+[19/35] Building CXX object CMakeFiles/sprint2_tests.dir/tests/phy_test.cpp.o
+[20/35] Building CXX object CMakeFiles/aether_bidirectional.dir/simulator/bidirectional.cpp.o
+[21/35] Linking CXX executable aether_sim
+[22/35] Linking CXX executable aether_tests
+[23/35] Linking CXX executable aether_slots
+[24/35] Linking CXX executable scheduler_bench
+[25/35] Linking CXX executable aether_bidirectional
+[26/35] Building CXX object CMakeFiles/sprint2_tests.dir/tests/bidirectional_test.cpp.o
+[27/35] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[28/35] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[29/35] Linking CXX static library lib/libgtest.a
+[30/35] Linking CXX static library lib/libgtest_main.a
+[31/35] Linking CXX static library lib/libgmock.a
+[32/35] Linking CXX static library lib/libgmock_main.a
+[33/35] Linking CXX executable mac_tests
+[34/35] Linking CXX executable sprint2_tests
