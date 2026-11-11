@@ -1,0 +1,16 @@
+[0/1] Re-running CMake...
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/scratch/bb532e546b90/aether-sprint2/build-release
+[1/13] Building CXX object CMakeFiles/aether_sprint2.dir/src/phy/feedback.cpp.o
+[2/13] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/harq.cpp.o
+[3/13] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/bidirectional.cpp.o
+[4/13] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/controller.cpp.o
+[5/13] Linking CXX static library libaether_sprint2.a
+[6/13] Building CXX object CMakeFiles/sprint2_tests.dir/tests/harq_test.cpp.o
+[7/13] Building CXX object CMakeFiles/sprint2_tests.dir/tests/phy_test.cpp.o
+[8/13] Building CXX object CMakeFiles/aether_bidirectional.dir/simulator/bidirectional.cpp.o
+[9/13] Linking CXX executable aether_bidirectional
+[10/13] Building CXX object CMakeFiles/sprint2_tests.dir/tests/controller_test.cpp.o
+[11/13] Building CXX object CMakeFiles/sprint2_tests.dir/tests/bidirectional_test.cpp.o
+[12/13] Linking CXX executable sprint2_tests

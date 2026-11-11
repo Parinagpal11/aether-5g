@@ -1,3 +1,5 @@
+> Historical Sprint 1 evidence. For current Sprint 2 behavior and verification, see [Sprint 2 report](sprint2/report.md). These timings do not measure Sprint 2.
+
 # Verified performance results
 
 Measured 2026-11-11 on shared virtual Linux 6.18.57 x86_64; /proc/cpuinfo reports AMD EPYC 9V74. CPU isolation and physical topology unavailable (lscpu could not read sysfs). GCC 14.2.0, C++20, Release -O3 -DNDEBUG. One warmup/measurement run per case; 1000 warmup and 10000 measured calls. See benchmark-methodology.md and raw benchmark.csv.

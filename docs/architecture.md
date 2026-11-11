@@ -1,9 +1,13 @@
-# Architecture and boundaries
+# Architecture
 
-The current executable composes constant traffic generation, a single-owner scheduler, slot clock and CSV output. The new domain API is `include/aether/mac/scheduler.hpp`; implementation lives in `src/mac/scheduler.cpp`. Original API and demo remain separate for compatibility.
+Sprint 2 adds MacController, HarqManager, FeedbackModel and a bidirectional scenario runner. The original byte-budget and PRB scheduler APIs, sources and tests are unchanged.
 
-Scheduler owns the UE map and both queue/throughput state. Only validated operations mutate it. Ordered IDs produce stable ties and replay; callers cannot mutate exposed const state. A schedule call computes a UE order, assigns each UE at most one contiguous grant, drains its backlog, and updates historical service. No resources overlap. Empty, inactive and outage UEs are excluded.
+MacController owns two Plane instances. Each has its own Scheduler, UE Link map, retry cursor and per-slot scheduling guard. Each Link owns a HarqManager and independent admitted/delivered/failed counters. Queue bytes remain inside the original scheduler; its served counter is used only as unique-first-transmission accounting, never as delivery.
 
-Policy is injected at construction through an enum on one common interface. Round-robin remembers the last served identifier, avoiding dangling indices after removal. PF orders by one-PRB capacity divided by an exponentially averaged bytes/slot service (alpha=0.01). QoS orders lower numeric priority first, then PF. Both are greedy per slot; strict QoS can starve low-priority traffic. RR provides turns, not equal byte throughput under unequal channels.
+New grants transition queued bytes to HARQ reservations. ACK/failure completion moves reservations to delivered/failed exactly once. Retries do not enqueue or readmit bytes. UL reports update cumulative admission; pending grants are already absent from the scheduler queue.
 
-Future boundaries: traffic -> SDAP -> PDCP -> RLC -> MAC -> simulated PHY, with a receive path for UL. Configuration events will be serialized by the simulation controller. HARQ completion must be separated from current scheduled-byte accounting before PHY losses are introduced.
+begin_slot is strictly increasing and expires waiting processes first. The caller then supplies due feedback, arrivals/configuration/reports and schedules each direction at most once. ACK at a deadline loses to timeout. Invalid configuration and reports do not change state. Registration stages both planes; scheduling stages one plane before commit, preserving state if staging throws. Other methods perform validation before mutation.
+
+FeedbackModel has no queue or mutable RNG. Integer mixing over seed, UE, direction, process, generation, attempt and slot provides reproducible outcomes independent of evaluation order. The scenario runner owns bounded-horizon feedback events and writes optional trace CSV. It stops admitting after traffic_slots and drains to a hard iteration bound.
+
+No threading, shared mutable global state, payload ownership, receiver stack or real PHY is introduced. See sprint2/design.md for the contract and limitations.

@@ -1,0 +1,138 @@
+[1/34] Building CXX object CMakeFiles/aether_core.dir/src/scheduler.cpp.o
+[2/34] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/harq.cpp.o
+[3/34] Building CXX object CMakeFiles/aether_sprint2.dir/src/phy/feedback.cpp.o
+[4/34] Building CXX object CMakeFiles/aether_mac.dir/src/mac/scheduler.cpp.o
+[5/34] Linking CXX static library libaether_mac.a
+[6/34] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/controller.cpp.o
+[7/34] Building CXX object CMakeFiles/aether_sprint2.dir/src/mac/bidirectional.cpp.o
+[8/34] Linking CXX static library libaether_core.a
+[9/34] Building CXX object CMakeFiles/aether_sim.dir/src/main.cpp.o
+[10/34] Building CXX object CMakeFiles/aether_tests.dir/tests/scheduler_test.cpp.o
+[11/34] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[12/34] Building CXX object CMakeFiles/aether_slots.dir/simulator/main.cpp.o
+[13/34] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[14/34] Linking CXX static library libaether_sprint2.a
+[15/34] Building CXX object CMakeFiles/scheduler_bench.dir/benchmarks/scheduler_bench.cpp.o
+[16/34] Building CXX object CMakeFiles/mac_tests.dir/tests/mac_test.cpp.o
+[17/34] Building CXX object CMakeFiles/sprint2_tests.dir/tests/harq_test.cpp.o
+[18/34] Building CXX object CMakeFiles/sprint2_tests.dir/tests/phy_test.cpp.o
+[19/34] Building CXX object CMakeFiles/sprint2_tests.dir/tests/controller_test.cpp.o
+[20/34] Building CXX object CMakeFiles/aether_bidirectional.dir/simulator/bidirectional.cpp.o
+[21/34] Linking CXX executable aether_sim
+[22/34] Linking CXX executable aether_tests
+[23/34] Linking CXX executable aether_slots
+[24/34] Linking CXX executable scheduler_bench
+[25/34] Linking CXX executable aether_bidirectional
+[26/34] Building CXX object CMakeFiles/sprint2_tests.dir/tests/bidirectional_test.cpp.o
+[27/34] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[28/34] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[29/34] Linking CXX static library lib/libgtest.a
+[30/34] Linking CXX static library lib/libgtest_main.a
+[31/34] Linking CXX static library lib/libgmock.a
+[32/34] Linking CXX static library lib/libgmock_main.a
+[33/34] Linking CXX executable mac_tests
+FAILED: [code=1] mac_tests mac_tests_e3b0c442_tests.cmake /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize/mac_tests_e3b0c442_tests.cmake
+: && /usr/bin/c++ -g -fsanitize=address,undefined -Wl,--dependency-file=CMakeFiles/mac_tests.dir/link.d CMakeFiles/mac_tests.dir/tests/mac_test.cpp.o -o mac_tests  libaether_mac.a  libaether_core.a  lib/libgtest_main.a  lib/libgtest.a && cd /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize && /home/agent/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -P /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize/mac_tests_e3b0c442_discovery.cmake --
+==217==LeakSanitizer has encountered a fatal error.
+==217==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==217==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+CMake Error at /home/agent/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/GoogleTestAddTests.cmake:233 (message):
+  Error running test executable.
+
+    Path: '/workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize/mac_tests'
+    Working directory: '/workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize'
+    Timeout: '5'
+    Result: 1
+    Output:
+      Running main() from /workspace/scratch/bb532e546b90/aether-sprint2/build/_deps/googletest-src/googletest/src/gtest_main.cc
+      Capacity.
+        ZeroAndBounds
+        KnownCalculation
+        Monotonic
+      Clock.
+        DurationsAndProgress
+      Registry.
+        Validation
+        OverflowIsAtomic
+      RoundRobin.
+        RotationAndRemoval
+        InactiveAndOutage
+        PartialAndContiguous
+      Scheduler.
+        EmptyZeroAndInvalidResource
+      ProportionalFair.
+        ChannelAndHistory
+      Qos.
+        PriorityOverridesChannel
+      Fairness.
+        KnownValues
+      Regression.
+        LegacyShrinkingVector
+      Policies/Invariants.
+        SeededReplayAndConservation/0  # GetParam() = 4-byte object <00-00 00-00>
+        SeededReplayAndConservation/1  # GetParam() = 4-byte object <01-00 00-00>
+        SeededReplayAndConservation/2  # GetParam() = 4-byte object <02-00 00-00>
+
+
+Call Stack (most recent call first):
+  mac_tests_e3b0c442_discovery.cmake:2 (gtest_discover_tests_impl)
+
+
+[34/34] Linking CXX executable sprint2_tests
+FAILED: [code=1] sprint2_tests sprint2_tests_e3b0c442_tests.cmake /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize/sprint2_tests_e3b0c442_tests.cmake
+: && /usr/bin/c++ -g -fsanitize=address,undefined -Wl,--dependency-file=CMakeFiles/sprint2_tests.dir/link.d CMakeFiles/sprint2_tests.dir/tests/harq_test.cpp.o CMakeFiles/sprint2_tests.dir/tests/controller_test.cpp.o CMakeFiles/sprint2_tests.dir/tests/phy_test.cpp.o CMakeFiles/sprint2_tests.dir/tests/bidirectional_test.cpp.o -o sprint2_tests  libaether_sprint2.a  lib/libgtest_main.a  libaether_mac.a  lib/libgtest.a && cd /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize && /home/agent/.local/lib/python3.12/site-packages/cmake/data/bin/cmake -P /workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize/sprint2_tests_e3b0c442_discovery.cmake --
+==220==LeakSanitizer has encountered a fatal error.
+==220==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==220==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+CMake Error at /home/agent/.local/lib/python3.12/site-packages/cmake/data/share/cmake-4.4/Modules/GoogleTestAddTests.cmake:233 (message):
+  Error running test executable.
+
+    Path: '/workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize/sprint2_tests'
+    Working directory: '/workspace/scratch/bb532e546b90/aether-sprint2/build-sanitize'
+    Timeout: '5'
+    Result: 1
+    Output:
+      Running main() from /workspace/scratch/bb532e546b90/aether-sprint2/build/_deps/googletest-src/googletest/src/gtest_main.cc
+      Harq.
+        ConfigurationValidation
+        AckDeliversOnce
+        NackRetryKeepsBytesAndRejectsOldAttempt
+        AttemptLimitAndFailedReuse
+        DeadlineIsExclusiveAndExpiryIsIdempotent
+        TimeoutMakesRetryReady
+        ExhaustionAndInvalidOperationsAreAtomic
+        OverflowRejected
+      Controller.
+        DlVerticalSliceCountsOnlyAcknowledgedBytes
+        DirectionsAndProcessNamespacesAreIndependent
+        RetriesDoNotConsumeUniqueBytesTwice
+        ExhaustedAttemptsRetireExactlyOnce
+        OutstandingBoundsApplyToInflightAndQueued
+        NoFreeProcessPreservesQueuedData
+        OutageAndInsufficientRetryBudgetPreservePending
+        BadClockBudgetAndRegistrationLeaveStateIntact
+        CumulativeCounterOverflowRejectedWithoutMutation
+        FullAccountingAgainstIndependentLedger
+      Bsr.
+        DelayedReportDoesNotReadmitPendingOrDeliveredBytes
+        InvalidReportsAreAtomic
+        FreshnessStopsNewGrantsButNotRetries
+        RetirementWatermarksAndZeroReports
+      Phy.
+        CertainAckNackAndSilence
+        DeterministicAndIdentityPreserved
+        RejectsInvalidConfigurationAndOverflow
+      BidirectionalEdges.
+        AllFeedbackSilentTerminatesWithFailure
+        PerfectChannelDeliversEverything
+      AllPolicies/Bidirectional.
+        HundredUesReplayAndDrain/0  # GetParam() = 4-byte object <00-00 00-00>
+        HundredUesReplayAndDrain/1  # GetParam() = 4-byte object <01-00 00-00>
+        HundredUesReplayAndDrain/2  # GetParam() = 4-byte object <02-00 00-00>
+
+
+Call Stack (most recent call first):
+  sprint2_tests_e3b0c442_discovery.cmake:2 (gtest_discover_tests_impl)
+
+
+ninja: build stopped: subcommand failed.

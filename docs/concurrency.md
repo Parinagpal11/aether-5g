@@ -1,2 +1,4 @@
 # Concurrency
-Single-threaded reference mode only. Scheduler and clock are not thread-safe. One owner must serialize all calls; references returned by state() must not be held across concurrent mutations. No detached threads or shared globals. Bounded queues, jthreads, shutdown semantics and concurrent/reference comparison are Sprint 5 work; no TSan race-free claim is made.
+Single-threaded reference mode only. MacController, HarqManager, Scheduler and the clock require serialized ownership. Const inspection references must not be used across concurrent mutation. FeedbackModel is immutable and stateless; no concurrent-runtime claims are made.
+
+Each scheduling call stages a copy of one direction and commits on success. Registration stages both directions. This is exception safety, not thread synchronization. Accounting and feedback processing do not use callbacks or background threads. The scenario feedback queue is bounded by finite supported UE count and feedback delay, not a production work queue. Bounded producer/consumer queues and jthread shutdown remain Sprint 5 work. TSan was not run for Sprint 2.
